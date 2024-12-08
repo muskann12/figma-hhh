@@ -86,7 +86,7 @@ const Hero = () => {
             variants={staggerContainer}
             initial="hidden"
             animate={isInView ? "show" : "hidden"}
-            className="pt-24 h-2/4 w-full lg:h-full lg:w-2/4 flex flex-col gap-4 px-4 lg:px-0 justify-center overflow-hidden"
+            className="pt-6 lg:pt-24 h-2/4 w-full lg:h-full lg:w-2/4 flex flex-col gap-4 px-4 lg:px-0 justify-center overflow-hidden"
           >
             <motion.h1
               variants={textVariant}
