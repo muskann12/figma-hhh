@@ -16,7 +16,7 @@ const Cart = () => {
               <img
                 src="/images/graphic.png"
                 alt=""
-                className="h-32 w-32 object-cover"
+                className="h-16 w-16 lg:h-32 lg:w-32 object-cover"
               />
               <div className="w-full">
                 <div className="w-full flex items-center justify-between">
@@ -27,7 +27,7 @@ const Cart = () => {
                 <p className="text-sm">Color: White</p>
                 <div className="w-full flex items-center justify-between">
                   <h1 className="text-xl font-bold">$145</h1>
-                  <div className="h-12 w-48 px-6 bg-[#f2f0f1] flex items-center justify-between rounded-[30px] cursor-pointer">
+                  <div className="h-12 w-24 sm:w-28 md:w-48 px-6 bg-[#f2f0f1] flex items-center justify-between rounded-[30px] cursor-pointer">
                     <h1 className="text-2xl font-bold cursor-pointer">-</h1>
                     <h1 className="text-2xl font-bold">1</h1>
                     <h1 className="text-2xl font-bold cursor-pointer">+</h1>
@@ -39,7 +39,7 @@ const Cart = () => {
               <img
                 src="/images/pant.png"
                 alt=""
-                className="h-32 w-32 object-cover"
+                className="h-16 w-16 lg:h-32 lg:w-32 object-cover"
               />
               <div className="w-full">
                 <div className="w-full flex items-center justify-between">
@@ -50,7 +50,7 @@ const Cart = () => {
                 <p className="text-sm">Color: blue</p>
                 <div className="w-full flex items-center justify-between">
                   <h1 className="text-xl font-bold">$145</h1>
-                  <div className="w-48 h-12 px-6 bg-[#f2f0f1] flex items-center justify-between rounded-[30px] cursor-pointer">
+                  <div className="h-12 w-24 sm:w-28 md:w-48 px-6 bg-[#f2f0f1] flex items-center justify-between rounded-[30px] cursor-pointer">
                     <h1 className="text-2xl font-bold cursor-pointer">-</h1>
                     <h1 className="text-2xl font-bold">1</h1>
                     <h1 className="text-2xl font-bold cursor-pointer">+</h1>
@@ -62,7 +62,7 @@ const Cart = () => {
               <img
                 src="/images/checks.png"
                 alt=""
-                className="h-32 w-32 object-cover"
+                className="h-16 w-16 lg:h-32 lg:w-32 object-cover"
               />
               <div className="w-full">
                 <div className="w-full flex items-center justify-between">
@@ -73,7 +73,7 @@ const Cart = () => {
                 <p className="text-sm">Color: Red</p>
                 <div className="w-full flex items-center justify-between">
                   <h1 className="text-xl font-bold">$180</h1>
-                  <div className="w-48 h-12 px-6 bg-[#f2f0f1] flex items-center justify-between rounded-[30px] cursor-pointer">
+                  <div className="h-12 w-24 sm:w-28 md:w-48 px-6 bg-[#f2f0f1] flex items-center justify-between rounded-[30px] cursor-pointer">
                     <h1 className="text-2xl font-bold cursor-pointer">-</h1>
                     <h1 className="text-2xl font-bold">1</h1>
                     <h1 className="text-2xl font-bold cursor-pointer">+</h1>
