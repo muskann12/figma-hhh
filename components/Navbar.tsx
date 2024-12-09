@@ -4,7 +4,7 @@ import { Navlinks } from "@/constants";
 import React, { useState, useEffect } from "react";
 import { BiCart, BiSearch, BiUser, BiMenu, BiX } from "react-icons/bi";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
+
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "./ui/Button";
 
