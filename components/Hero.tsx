@@ -89,7 +89,7 @@ const Hero = () => {
           >
             <motion.h1
               variants={textVariant}
-              className={`text-6xl font-extrabold gradient-text ${fontMont.className} mainHeading`}
+              className={`text-6xl font-extrabold  text-black gradient-text ${fontMont.className} mainHeading`}
             >
               FIND CLOTHES <br /> THAT MATCHES <br /> YOUR STYLE
             </motion.h1>

@@ -23,7 +23,7 @@ const Footer = () => {
       <div className="pt-40 px-6 md:px-10 lg:px-20 container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-1">
-            <h2 className="text-2xl font-bold mb-4"><img src="/images/logo.png" alt="" /></h2>
+            <h2 className="text-[40px] font-extrabold mb-4"><img src="/images/logo.png" alt="" /></h2>
             <p className="text-gray-600 mb-4">
               We have clothes that suits your style and which you&apos;re proud
               to wear. From women to men.
