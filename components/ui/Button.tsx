@@ -42,8 +42,8 @@ const Button: React.FC<ButtonProps> = ({
     <button
       onClick={handleClick}
       className={`${
-        isBlack ? "bg-black text-white" : "bg-white text-black"
-      } px-12 py-4 rounded-full w-full lg:w-fit border border-black ${customClass}`}
+        isBlack ? "bg-black text-white" : "bg-white text-black hover:bg-slate-300"
+      } px-[70px] py-4 rounded-[62px] w-full lg:w-fit border border-black ${customClass}`}
     >
       {isImage ? children : title}
     </button>

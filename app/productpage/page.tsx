@@ -201,21 +201,31 @@ const ProductPage = () => {
       title="Polo With Contrast Trims"
       price={212}
       imgSrc="/images/blue.png"
+      rating={4.0}
+      oldPrice={242}
+      discount="-20%"
     />
     <ProductCards
       title="Grading Graphics T-shirt"
       price={145}
       imgSrc="/images/graphic.png"
+      rating={3.5}
+
     />
     <ProductCards
       title="Polo With Tipping Details"
       price={180}
       imgSrc="/images/red.png"
+      rating={4.5}
+
     />
     <ProductCards
       title="Black Stripped T-shirt"
       price={120}
       imgSrc="/images/bw.png"
+      rating={5.0}
+      oldPrice={160}
+      discount="-30%"
     />
   </div>
 </div>

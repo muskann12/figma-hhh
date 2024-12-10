@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="h-fit w-full bg-[#f2f0f1] relative mt-48">
       <div className="h-[180px] bg-black container mx-auto rounded-[30px] absolute -top-16 left-2/4 -translate-x-2/4 flex items-center justify-between px-2 md:px-8 lg:px-16">
         <h1 className="text-base md:text-2xl lg:text-5xl font-bold text-white uppercase">
-          stay upTo date about <br /> our latest offers
+          stay UpTo date about <br /> our latest offers
         </h1>
         <div className="flex flex-col gap-2">
           <input
@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-1">
             <h2 className="text-[40px] font-extrabold mb-4"><img src="/images/logo.png" alt="" /></h2>
-            <p className="text-gray-600 mb-4">
+            <p className="text-[#00000099] text-[14px] mb-4">
               We have clothes that suits your style and which you&apos;re proud
               to wear. From women to men.
             </p>
@@ -80,78 +80,78 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 leading-[19px]">
             <h3 className="font-semibold text-lg mb-4">COMPANY</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-[16px]">
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Works
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className=" text-[#00000099] hover:text-black">
                   Career
                 </a>
               </li>
             </ul>
           </div>
 
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 leading-[19px]">
             <h3 className="font-semibold text-lg mb-4">HELP</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-[16px]">
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Customer Support
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Delivery Details
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Terms & Conditions
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Privacy Policy
                 </a>
               </li>
             </ul>
           </div>
 
-          <div className="lg:col-span-1">
-            <h3 className="font-semibold text-lg mb-4">FAQ</h3>
-            <ul className="space-y-2">
+          <div className="lg:col-span-1 leading-[19px] ">
+            <h3 className="font-semibold  mb-4">FAQ</h3>
+            <ul className="space-y-2 text-[16px]">
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Account
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Manage Deliveries
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Orders
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Payments
                 </a>
               </li>
@@ -162,22 +162,22 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">RESOURCES</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Free eBooks
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Development Tutorial
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   How to - Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">
+                <a href="#" className="text-[#00000099] hover:text-black">
                   Youtube Playlist
                 </a>
               </li>
@@ -187,7 +187,7 @@ const Footer = () => {
 
         <div className="mt-16 py-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-600 text-sm">
+            <p className="text-[#00000099] text-sm">
               Shop.co &copy;Muskan Nisar 2000-2023, All Rights Reserved
             </p>
             <div className="flex gap-4">

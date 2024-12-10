@@ -89,7 +89,7 @@ const Hero = () => {
           >
             <motion.h1
               variants={textVariant}
-              className={`text-6xl font-extrabold  text-black gradient-text ${fontMont.className} mainHeading`}
+              className={`text-[64px] leading-[64px]  font-extrabold  text-black gradient-text ${fontMont.className} mainHeading`}
             >
               FIND CLOTHES <br /> THAT MATCHES <br /> YOUR STYLE
             </motion.h1>
@@ -208,7 +208,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-6xl font-extrabold text-black text-center gradient-text"
+          className="text-[48px] leading-[57.6px] font-extrabold text-black text-center gradient-text"
         >
           NEW ARRIVALS
         </motion.h1>
@@ -223,22 +223,33 @@ const Hero = () => {
             <ProductCards
               title="T-shirt with Tape Details"
               price={120}
+              rating={4.5}
+
               imgSrc="/images/t.png"
             />
             <ProductCards
               title="Skinny Fit Jeans"
               price={240}
+              rating={3.5}
+              oldPrice={260}
+              discount="20%"
+              
+              
               imgSrc="/images/pant.png"
             />
             <ProductCards
               title="Checked Shirt"
               price={180}
               imgSrc="/images/checks.png"
+              rating={4.5}
             />
             <ProductCards
               title="Sleeve Stripped T-shirt"
               price={130}
               imgSrc="/images/reds.png"
+              rating={4.5}
+              oldPrice={160}
+              discount="-30%"
             />
           </div>
           <div className="flex justify-center w-full mt-12">
@@ -246,7 +257,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <h1 className="text-6xl font-extrabold text-black text-center mt-24">
+        <h1 className="text-[48px] font-extrabold text-black text-center mt-24">
           TOP SELLING
         </h1>
 
@@ -256,21 +267,27 @@ const Hero = () => {
               title="Vertical Stripped Shirt"
               price={212}
               imgSrc="/images/greens.png"
+              rating={5.0}
+              oldPrice={232}
+              discount="-20%"
             />
             <ProductCards
               title="Courage Graphics T-shirt"
               price={145}
               imgSrc="/images/orange.png"
+              rating={4.0}
             />
             <ProductCards
               title="Loose Fit Bermuda Shorts"
               price={80}
               imgSrc="/images/short.png"
+              rating={3.0}
             />
             <ProductCards
               title="Faded Skinny Jeans"
               price={210}
               imgSrc="/images/blackp.png"
+              rating={4.5}
             />
           </div>
           <div className="flex justify-center w-full mt-12">

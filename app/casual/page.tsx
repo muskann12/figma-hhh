@@ -222,50 +222,74 @@ const Casual = () => {
 
             {/* Product Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
-              <ProductCards
-                title="Casual Blue T-Shirt"
-                price={49.99}
-                imgSrc="/images/blue.png"
-              />
-              <ProductCards
-                title="Striped Casual Shirt"
-                price={59.99}
-                imgSrc="/images/bw.png"
-              />
-              <ProductCards
+            <ProductCards
                 title="Graphic Print Tee"
-                price={39.99}
+                price={145}
                 imgSrc="/images/graphic.png"
+                rating={3.5}
               />
-              <ProductCards
+                <ProductCards
                 title="Red Casual Polo"
-                price={54.99}
+                price={180}
                 imgSrc="/images/red.png"
+                rating={4.5}
               />
-              <ProductCards
-                title="Casual Blue T-Shirt"
-                price={49.99}
-                imgSrc="/images/blue.png"
-              />
-              <ProductCards
-                title="Striped Casual Shirt"
-                price={59.99}
-                imgSrc="/images/bw.png"
-              />
-              <ProductCards
-                title="Striped Casual Shirt"
-                price={59.99}
-                imgSrc="/images/bw.png"
-              />
-              <ProductCards
+            
+            <ProductCards
                 title="Vertical Stripped Shirt"
                 price={212}
                 imgSrc="/images/greens.png"
+                rating={5.0}
+                oldPrice={150}
+                discount="-30%"
               />
+             
+              
+              <ProductCards
+                title="Skinny Fit Jeans"
+                price={54.99}
+                imgSrc="/images/jjj.png"
+                rating={3.5}
+                oldPrice={260}
+                discount="-20%"
+              />
+              <ProductCards
+                title="Checkerd Shirt"
+                price={49.99}
+                imgSrc="/images/check.png"
+                rating={4.5}
+              />
+              <ProductCards
+                title="Sleeve Striped T-Shirt"
+                price={59.99}
+                imgSrc="/images/orangee.png"
+                rating={4.5}
+                oldPrice={160}
+                discount="=-30%"
+              />
+
+<ProductCards
+                title="Vertical Stripped Shirt"
+                price={212}
+                imgSrc="/images/greens.png"
+                rating={5.0}
+                oldPrice={232}
+                discount="-20%"
+
+              />
+              <ProductCards
+                title="Courage Graphic T-Shirt"
+                price={145}
+                imgSrc="/images/fo.png"
+                rating={4.0}
+              />
+              
               <ProductCards
                 title="Loose Fit Bermuda Shorts"
                 price={80}
                 imgSrc="/images/short.png"
+                rating={3.0}
+                
               />
             </div>
           </div>
