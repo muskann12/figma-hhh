@@ -1,20 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { Navlinks } from "@/constants";
+import Link from "next/link";  // Import Link from Next.js
+import { Navlinks } from "@/constants"; // Update your Navlinks to be more general
 import React, { useState, useEffect } from "react";
-import { BiCart, BiSearch, BiUser, BiMenu, BiX } from "react-icons/bi";
-import { useRouter } from "next/navigation";
-
+import { BiSearch, BiMenu, BiX } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
-import Button from "./ui/Button";
 
 const Navbar = () => {
-  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [easterEggBuffer, setEasterEggBuffer] = useState<number[]>([]);
   const [showEasterEgg, setShowEasterEgg] = useState(false);
 
-  
   const _m = "TWFkZSBieSBTeWVkIE1hc2hob29kIEh1c3NhaW4g8J+OiQ==";
   const _d = (s: string) => Buffer.from(s, 'base64').toString();
 
@@ -76,9 +72,9 @@ const Navbar = () => {
             {isMenuOpen ? <BiX /> : <BiMenu />}
           </button>
           <h1 className="font-bold text-xl cursor-pointer hover-scale">
-            <Button href="/" isImage customClass="!border-none !p-0">
-              <img src="/images/logo.png" alt="" />
-            </Button>
+            <Link href="/" passHref>
+              <img src="/images/logo.png" alt="Logo" className="border-none p-0" />
+            </Link>
           </h1>
         </motion.div>
 
@@ -96,13 +92,12 @@ const Navbar = () => {
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="py-2 px-4 hover:bg-gray-50 rounded-lg cursor-pointer hover-scale"
             >
-              <Button
+              <Link
                 href={links.link}
-                title={links.name}
-                customClass="!p-0 !border-none"
+                className="!p-0 !border-none"
               >
                 {links.name}
-              </Button>
+              </Link>
             </motion.li>
           ))}
         </motion.ul>
@@ -117,7 +112,7 @@ const Navbar = () => {
             <input
               type="text"
               className="w-full pl-10 pr-4 py-2 border-none outline-none bg-transparent"
-              placeholder="Search for products..."
+              placeholder="Search..."
             />
             <BiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xl" />
           </div>
@@ -129,23 +124,15 @@ const Navbar = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex items-center gap-4"
         >
+          {/* You can adjust these buttons/icons to more general purposes if needed */}
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="p-2"
           >
-            <Button isImage href="/cart" customClass="!border-none !p-0">
-              <BiCart className="text-2xl" />
-            </Button>
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="p-2"
-          >
-            <Button isImage href="/profile" customClass="!border-none !p-0">
-              <BiUser className="text-2xl" />
-            </Button>
+            <Link href="/contact" className="!border-none !p-0">
+              <BiSearch className="text-2xl" />
+            </Link>
           </motion.button>
         </motion.div>
       </div>
@@ -167,13 +154,12 @@ const Navbar = () => {
                   transition={{ delay: index * 0.1 }}
                   className="py-2"
                 >
-                  <Button
+                  <Link
                     href={links.link}
-                    title={links.name}
-                    customClass="!p-0 !border-none"
+                    className="!p-0 !border-none"
                   >
                     {links.name}
-                  </Button>
+                  </Link>
                 </motion.li>
               ))}
             </ul>

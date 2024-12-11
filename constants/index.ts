@@ -1,9 +1,6 @@
-"use client"
-;
-
 export const Navlinks = [
-  { name: `Shop ˯ `, link: "/casual" },
-  { name: "On Sale", link: "/" },
-  { name: "New Arrivals", link: "/" },
-  { name: "Brands", link: "/" },
+  { name: 'Home', link: '/' },
+  { name: 'Shop', link: '/casual' },  // Change to /casual page
+  { name: 'About', link: '/about' },
+  { name: 'Contact', link: '/contact' },
 ];
