@@ -4,8 +4,8 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="h-fit w-full bg-[#f2f0f1] relative mt-48">
-      <div className="h-[180px] bg-black container mx-auto rounded-[30px] absolute -top-16 left-2/4 -translate-x-2/4 flex items-center justify-between px-2 md:px-8 lg:px-16">
-        <h1 className="text-base md:text-2xl lg:text-5xl font-bold text-white uppercase">
+      <div className="h-[180px] bg-black  container mx-auto rounded-[30px] absolute -top-16 left-2/4 -translate-x-2/4 flex items-center justify-between px-2 md:px-8 lg:px-16">
+        <h1 className="text-base md:text-2xl lg:text-5xl font-extrabold text-white uppercase">
           stay UpTo date about <br /> our latest offers
         </h1>
         <div className="flex flex-col gap-2">

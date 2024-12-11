@@ -2,26 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Google Fonts for Satoshi */
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap');
+
+/* Custom font for Integral CF (you can use your font path or CDN link) */
+@import url('https://fonts.googleapis.com/css2?family=IntegralCF:wght@400;700&display=swap');
+
+/* Alternatively, if you're using local font files, you can define them like this */
+/* Custom font for Integral CF (use your font path or CDN link) */
+@font-face {
+  font-family: 'IntegralCF';
+  src: url('/path/to/your/font/IntegralCF-Regular.woff2') format('woff2'),
+       url('/path/to/your/font/IntegralCF-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* You can also import the bold font if you like */
+@font-face {
+  font-family: 'IntegralCF';
+  src: url('/path/to/your/font/IntegralCF-Bold.woff2') format('woff2'),
+       url('/path/to/your/font/IntegralCF-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
