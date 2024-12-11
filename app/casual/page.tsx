@@ -8,6 +8,45 @@ const Casual = () => {
   const [openSection, setOpenSection] = useState("price");
   const [priceRange, setPriceRange] = useState(200);
 
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 6; // Number of products per page
+  
+  // Sample products (same as before)
+  const allProducts = [
+    { title: "Graphic Print Tee", price: 145, imgSrc: "/images/graphic.png", rating: 3.5 },
+    { title: "Red Casual Polo", price: 180, imgSrc: "/images/red.png", rating: 4.5 },
+    { title: "Vertical Stripped Shirt", price: 212, imgSrc: "/images/greens.png", rating: 5.0, oldPrice: 150, discount: "-30%" },
+    { title: "Skinny Fit Jeans", price: 54.99, imgSrc: "/images/jjj.png", rating: 3.5, oldPrice: 260, discount: "-20%" },
+    { title: "Checkered Shirt", price: 49.99, imgSrc: "/images/check.png", rating: 4.5 },
+    { title: "Sleeve Striped T-Shirt", price: 59.99, imgSrc: "/images/orangee.png", rating: 4.5, oldPrice: 160, discount: "-30%" },
+    { title: "Vertical Stripped Shirt", price: 212, imgSrc: "/images/greens.png", rating: 5.0, oldPrice: 232, discount: "-20%" },
+    { title: "Courage Graphic T-Shirt", price: 145, imgSrc: "/images/fo.png", rating: 4.0 },
+    { title: "Loose Fit Bermuda Shorts", price: 80, imgSrc: "/images/short.png", rating: 3.0 },
+    { title: "Sleeve Striped T-Shirt", price: 59.99, imgSrc: "/images/orangee.png", rating: 4.5, oldPrice: 160, discount: "-30%" },
+    { title: "Graphic Print Tee", price: 145, imgSrc: "/images/graphic.png", rating: 3.5 },
+    { title: "Vertical Stripped Shirt", price: 212, imgSrc: "/images/greens.png", rating: 5.0, oldPrice: 150, discount: "-30%" },
+  ];
+
+  // Derived products for the current page
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = allProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+
+  const totalPages = Math.ceil(allProducts.length / productsPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   // Client-side check
   const [isClient, setIsClient] = useState(false);
 
@@ -53,6 +92,7 @@ const Casual = () => {
                 </button>
               </div>
 
+              {/* Filter options (T-shirts, Shorts, etc.) */}
               <div className="space-y-4 mb-6">
                 <button className="w-full text-left py-2 hover:text-black/70">
                   T-shirts
@@ -71,6 +111,7 @@ const Casual = () => {
                 </button>
               </div>
 
+              {/* Price filter section */}
               <div className="mb-6">
                 <button
                   className="w-full flex items-center justify-between py-2"
@@ -101,6 +142,7 @@ const Casual = () => {
                 )}
               </div>
 
+              {/* Color filter section */}
               <div className="mb-6">
                 <button
                   className="w-full flex items-center justify-between py-2"
@@ -123,12 +165,18 @@ const Casual = () => {
                     <div className="h-8 w-8 rounded-full bg-blue-600 cursor-pointer ring-2 ring-blue-600 ring-offset-2"></div>
                     <div className="h-8 w-8 rounded-full bg-purple-500 cursor-pointer"></div>
                     <div className="h-8 w-8 rounded-full bg-pink-500 cursor-pointer"></div>
-                    <div className="h-8 w-8 rounded-full bg-white border cursor-pointer"></div>
+                    <div className="h-8 w-8 rounded-full bg-slate-300 border cursor-pointer"></div>
                     <div className="h-8 w-8 rounded-full bg-black cursor-pointer"></div>
+                    <div className="h-8 w-8 rounded-full bg-purple-900 cursor-pointer"></div>
+                    <div className="h-8 w-8 rounded-full bg-slate-500 cursor-pointer"></div>
+                    <div className="h-8 w-8 rounded-full bg-orange-800 cursor-pointer"></div>
+                    <div className="h-8 w-8 rounded-full bg-pink-900 cursor-pointer"></div>
+                    <div className="h-8 w-8 rounded-full bg-red-800 cursor-pointer"></div>
                   </div>
                 )}
               </div>
 
+              {/* Size filter section */}
               <div className="mb-6">
                 <button
                   className="w-full flex items-center justify-between py-2"
@@ -143,37 +191,20 @@ const Casual = () => {
                 </button>
                 {openSection === "size" && (
                   <div className="grid grid-cols-3 gap-2 mt-4">
-                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">
-                      XX-Small
-                    </button>
-                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">
-                      X-Small
-                    </button>
-                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">
-                      Small
-                    </button>
-                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">
-                      Medium
-                    </button>
-                    <button className="px-3 py-2 rounded-full bg-black text-white">
-                      Large
-                    </button>
-                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">
-                      X-Large
-                    </button>
-                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">
-                      XX-Large
-                    </button>
-                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">
-                      3X-Large
-                    </button>
-                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">
-                      4X-Large
-                    </button>
+                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">XX-Small</button>
+                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">X-Small</button>
+                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">Small</button>
+                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">Medium</button>
+                    <button className="px-3 py-2 rounded-full bg-black text-white">Large</button>
+                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">X-Large</button>
+                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">XX-Large</button>
+                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">3X-Large</button>
+                    <button className="px-3 py-2 rounded-full bg-[#f2f0f1]">4X-Large</button>
                   </div>
                 )}
               </div>
 
+              {/* Dress Style filter section */}
               <div className="mb-6">
                 <button
                   className="w-full flex items-center justify-between py-2"
@@ -187,26 +218,15 @@ const Casual = () => {
                   />
                 </button>
                 {openSection === "style" && (
-                  <div className="space-y-2 mt-4">
-                    <button className="w-full text-left py-2 hover:text-black/70">
-                      Casual
-                    </button>
-                    <button className="w-full text-left py-2 hover:text-black/70">
-                      Formal
-                    </button>
-                    <button className="w-full text-left py-2 hover:text-black/70">
-                      Party
-                    </button>
-                    <button className="w-full text-left py-2 hover:text-black/70">
-                      Gym
-                    </button>
+                  <div className="mt-4 space-y-2">
+                    <button className="w-full text-left py-2 hover:text-black/70">Casual</button>
+                    <button className="w-full text-left py-2 hover:text-black/70">Formal</button>
+                    <button className="w-full text-left py-2 hover:text-black/70">Sportswear</button>
+                    <button className="w-full text-left py-2 hover:text-black/70">Party</button>
+                    <button className="w-full text-left py-2 hover:text-black/70">Lounge</button>
                   </div>
                 )}
               </div>
-
-              <button className="w-full bg-black text-white rounded-full py-3 mt-6">
-                Apply Filter
-              </button>
             </div>
           </div>
 
@@ -222,75 +242,35 @@ const Casual = () => {
 
             {/* Product Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
-            <ProductCards
-                title="Graphic Print Tee"
-                price={145}
-                imgSrc="/images/graphic.png"
-                rating={3.5}
-              />
+              {currentProducts.map((product, index) => (
                 <ProductCards
-                title="Red Casual Polo"
-                price={180}
-                imgSrc="/images/red.png"
-                rating={4.5}
-              />
-            
-            <ProductCards
-                title="Vertical Stripped Shirt"
-                price={212}
-                imgSrc="/images/greens.png"
-                rating={5.0}
-                oldPrice={150}
-                discount="-30%"
-              />
-             
-              
-              <ProductCards
-                title="Skinny Fit Jeans"
-                price={54.99}
-                imgSrc="/images/jjj.png"
-                rating={3.5}
-                oldPrice={260}
-                discount="-20%"
-              />
-              <ProductCards
-                title="Checkerd Shirt"
-                price={49.99}
-                imgSrc="/images/check.png"
-                rating={4.5}
-              />
-              <ProductCards
-                title="Sleeve Striped T-Shirt"
-                price={59.99}
-                imgSrc="/images/orangee.png"
-                rating={4.5}
-                oldPrice={160}
-                discount="=-30%"
-              />
+                  key={index}
+                  title={product.title}
+                  price={product.price}
+                  imgSrc={product.imgSrc}
+                  rating={product.rating}
+                  oldPrice={product.oldPrice}
+                  discount={product.discount}
+                />
+              ))}
+            </div>
 
-<ProductCards
-                title="Vertical Stripped Shirt"
-                price={212}
-                imgSrc="/images/greens.png"
-                rating={5.0}
-                oldPrice={232}
-                discount="-20%"
-
-              />
-              <ProductCards
-                title="Courage Graphic T-Shirt"
-                price={145}
-                imgSrc="/images/fo.png"
-                rating={4.0}
-              />
-              
-              <ProductCards
-                title="Loose Fit Bermuda Shorts"
-                price={80}
-                imgSrc="/images/short.png"
-                rating={3.0}
-                
-              />
+            {/* Pagination */}
+            <div className="flex justify-between mt-8">
+              <button
+                onClick={handlePreviousPage}
+                className="bg-black text-white py-2 px-4 rounded-full disabled:opacity-50"
+                disabled={currentPage === 1}
+              >
+                Previous
+              </button>
+              <button
+                onClick={handleNextPage}
+                className="bg-black text-white py-2 px-4 rounded-full disabled:opacity-50"
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
             </div>
           </div>
         </div>
